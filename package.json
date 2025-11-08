@@ -1,0 +1,20 @@
+{
+  "name": "queuectl",
+  "version": "1.0.0",
+  "description": "A simple CLI-based background job queue system",
+  "main": "queuectl.js",
+  "bin": {
+    "queuectl": "./queuectl.js"
+  },
+  "scripts": {
+    "test": "bash test.sh"
+  },
+  "keywords": ["queue", "jobs", "cli"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "pg": "^8.11.3"
+  }
+}
+
