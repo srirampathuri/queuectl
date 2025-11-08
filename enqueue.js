@@ -1,8 +1,8 @@
 const db = require('./db');
 
 async function enqueueJob(jobData) {
+  let job;
   try {
-    let job;
     if (typeof jobData === 'string') {
       job = JSON.parse(jobData);
     } else {
@@ -22,7 +22,8 @@ async function enqueueJob(jobData) {
   } catch (err) {
     if (err.code === '23505') {
       // Duplicate key error
-      console.error(`Error: Job with id "${job.id}" already exists`);
+      const jobId = job ? job.id : 'unknown';
+      console.error(`Error: Job with id "${jobId}" already exists`);
     } else {
       console.error('Error enqueueing job:', err.message);
     }
