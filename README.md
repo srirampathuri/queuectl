@@ -2,6 +2,10 @@
 
 A simple job queue system I built for a project. You can add jobs to a queue and workers will process them. If a job fails, it retries automatically. Built with Node.js and PostgreSQL.
 
+## Demo Video
+
+[📹 Watch Demo Video](YOUR_GOOGLE_DRIVE_LINK_HERE)
+
 ## What it does
 
 - Add jobs to a queue (like running commands)
